@@ -33,7 +33,8 @@
                 $this->load->view('v_form', $data);
             }
         }
-        public function update($id_category = null){//=null
+        public function update($id_category = null)
+        {
             if ($this->input->post()){
                 //proses update
                 $update_data = $this->input->post();

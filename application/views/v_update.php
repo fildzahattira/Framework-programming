@@ -13,7 +13,7 @@
             <tr>
                 <td>ID Category </td>
                 <td>:</td>
-                <td><input type="text" name="name_category" value="<?php echo $data->id_category;?>" readonly></td>
+                <td><input type="text" name="id_category" value="<?php echo $data->id_category;?>" readonly></td>
             </tr>
             <tr>
                 <td>Name Category </td>
