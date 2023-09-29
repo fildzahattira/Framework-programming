@@ -30,7 +30,7 @@
             }
             else{
                 $data['judul'] = "INPUT DATA";
-                $this->load->view('v_form', $data);
+                $this->load->view('v_libraryForm', $data);
             }
         }
         public function update($id_category = null)
@@ -44,7 +44,7 @@
             else{
                 $data['judul'] = "UPDATE DATA";
                 $data['cgry'] = $this->libraryModel->get_one($id_category);
-                $this->load->view('v_update', $data);
+                $this->load->view('v_libraryUpdate', $data);
             }
         }
         function delete($id_category)
