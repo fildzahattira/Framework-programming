@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update Food Menu</title>
 </head>
 <body>
-<h3><?php echo $judul; ?></h3>
+<h3><?php echo $title; ?></h3>
     <form method="post" action="<?php echo base_url('index.php/restaurant/update') ?>">
     <?php foreach ($f_menu as $data): ?>
         <table>

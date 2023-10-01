@@ -30,10 +30,10 @@
             if ($this->input->post()){
                 $update_data = $this->input->post();
                 $this->restaurantModel->update_foodsMenu($update_data);
-                redirect('restaurant');
+                redirect('restaurant/index');
             }
             else{
-                $data['judul'] = "Update Food Menu";
+                $data['title'] = "Update Food Menu";
                 $data['f_menu'] = $this->restaurantModel->get_one($id_food);
                 $this->load->view('v_foodsMenuUpdate', $data);
             }
@@ -41,7 +41,7 @@
         function delete($id_food)
         {
             $this->restaurantModel->delete_foodsMenu($id_food);
-            redirect('restaurant');
+            redirect('restaurant/index');
         }
     }
 ?>
