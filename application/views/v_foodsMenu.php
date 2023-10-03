@@ -1,3 +1,4 @@
+<?php include('v_headerFoodsMenu.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +7,7 @@
     <title>Food Menu</title>
 </head>
 <body>
-<h3><?php echo $title; ?></h3>
-<a href="<?php echo base_url('index.php/restaurant/insert') ?>">ADD DATA</a>
-    <table border="1">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <td>id_food</td>
