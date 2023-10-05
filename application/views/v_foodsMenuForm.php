@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insert Food Menu</title>
 </head>
+
 <body>
-<h3><?php echo $title; ?></h3>
+    <h3><?php echo $title; ?></h3>
     <form method="post" action="<?php echo base_url('index.php/restaurant/insert') ?>">
         <table>
             <tr>
@@ -18,25 +20,25 @@
                 <td>Food Category</td>
                 <td>:</td>
                 <td>
-                    <tr>
-                        <td>
-                            <input type="radio" name="category_food" value="Appetizer">
-                            <label for="Appetizer">Appetizer</label><br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="category_food" value="Main Course">
-                            <label for="Main Course">Main Course</label><br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="category_food" value="Dessert">
-                            <label for="Dessert">Dessert</label><br>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="category_food" value="Appetizer">
+                    <label for="Appetizer">Appetizer</label><br>
                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="category_food" value="Main Course">
+                    <label for="Main Course">Main Course</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="category_food" value="Dessert">
+                    <label for="Dessert">Dessert</label><br>
+                </td>
+            </tr>
+            </td>
             </tr>
             <tr>
                 <td>Food Price</td>
@@ -54,9 +56,21 @@
                 <td><input type="text" name="description_food"></td>
             </tr>
             <tr>
+                <td>Choose Food certification</td>
+                <td>:</td>
+                <td>
+                    <select name="id_certification">
+                        <?php foreach ($certification as $data) :  ?>
+                            <option value="<?php echo $data->id_certification ?>"><?php echo $data->name_certification ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
                 <td><input type="submit" value="Insert"></td>
             </tr>
         </table>
     </form>
 </body>
+
 </html>

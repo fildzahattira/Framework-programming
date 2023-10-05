@@ -10,13 +10,14 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <td>id_food</td>
-                <td>name_food</td>
-                <td>category_food</td>
-                <td>price_food</td>
-                <td>calorie_food</td>
-                <td>description_food</td>
-                <td>action</td>
+                <td>Food ID</td>
+                <td>Food Name</td>
+                <td>Food Category</td>
+                <td>Food Price</td>
+                <td>Food Calorie</td>
+                <td>Food Description</td>
+                <td>Food Certification</td>
+                <td>Action</td>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,8 @@
                     <td><?php echo $data->price_food; ?></td>
                     <td><?php echo $data->calorie_food; ?></td>
                     <td><?php echo $data->description_food; ?></td>
+                    <td><?php echo $data->name_certification; ?></td>
+
 
                     <td>
                         <a href = "<?php echo base_url('index.php/restaurant/update/'.$data->id_food);?>">UPDATE</a>
