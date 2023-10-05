@@ -1,4 +1,3 @@
-<?php include('v_headerFoodsMenu.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
