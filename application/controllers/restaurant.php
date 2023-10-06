@@ -31,7 +31,7 @@
             $data['certification'] = $this->restaurantModel->get_certification();
             if ($this->input->post()){
                 $update_data = $this->input->post();
-                print_r($update_data);
+                // print_r($update_data);
                 $this->restaurantModel->update_foodsMenu($update_data);
                 redirect('restaurant/index');
             }
