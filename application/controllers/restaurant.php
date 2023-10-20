@@ -4,6 +4,8 @@
         {
             parent::__construct();
             $this->load->model('restaurantModel');
+            // $this->load->model('myweb');
+
         }
         function index()
         {
@@ -17,7 +19,19 @@
             if ($this->input->post()) 
             {
                 $data_input_foodsMenu = $this->input->post();
-                $this->restaurantModel->insert_foodsMenu($data_input_foodsMenu);
+                $result = $this->restaurantModel->insert_foodsMenu($data_input_foodsMenu);
+                if ($result > 0){
+                    //success
+                    $this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+                   SUCCESS! data saved
+                  </div>');
+                }
+                else{
+                    //err
+                    $this->session->set_flashdata('msg', '<div class="alert alert-danger" role="alert">
+                    ERROR! fail
+                   </div>');
+                }
                 redirect('restaurant/index');
             }
             else
