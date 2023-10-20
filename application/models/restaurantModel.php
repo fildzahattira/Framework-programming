@@ -31,6 +31,8 @@
             ); 
 
             $this->db->insert('foodsmenu', $data_insert);
+            return $this->db->affected_rows();
+
         }
 
         function get_one($id_food)
