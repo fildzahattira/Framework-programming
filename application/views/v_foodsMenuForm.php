@@ -13,7 +13,7 @@
     <div class="w-25 p-3"  style="background-color:#DCEDC2;"> 
         <h3><?php echo $title; ?></h3>
 
-        <form method="post" action="<?php echo base_url('index.php/restaurant/insert') ?>">
+        <form method="post" action="<?php echo base_url('restaurant/insert') ?>">
 
             <label for="name_food" class="form-label">Food Name : </label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="write food name here" name="name_food">

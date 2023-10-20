@@ -10,7 +10,8 @@
     <nav class="navbar" style="background-color: #FDFD96;">
     <div class="container-fluid">
         <a class="navbar-brand">FOOD MENU</a>
-        <a class = "btn btn-outline-success" href = "<?php echo base_url('index.php/restaurant/insert/');?>" role = "button">ADD NEW DATA</a>
+        <?php echo $this->session->flashdata('msg'); ?>
+        <a class = "btn btn-outline-success" href = "<?php echo base_url('restaurant/insert/');?>" role = "button">ADD NEW DATA</a>
     </div>
     </nav>
     <table class="table table-striped table-hover">
@@ -30,15 +31,15 @@
             <?php foreach ($f_menu as $data) : ?>
                 <tr align="center">
                     <th scope = "row"><?php echo $data->id_food; ?></th>
-                    <td><?php echo $data->name_food; ?></td>
+                    <td><?php echo kapital($data->name_food); ?></td>
                     <td><?php echo $data->category_food; ?></td>
                     <td><?php echo $data->price_food; ?></td>
                     <td><?php echo $data->calorie_food; ?></td>
                     <td><?php echo $data->description_food; ?></td>
                     <td><?php echo $data->name_certification; ?></td>
                     <td>
-                        <a class = "btn btn-warning" href = "<?php echo base_url('index.php/restaurant/update/'.$data->id_food);?>" role = "button">UPDATE</a>
-                        <a class = "btn btn-danger" href = "<?php echo base_url('index.php/restaurant/delete/'.$data->id_food);?>" role = "button">DELETE</a>
+                        <a class = "btn btn-warning" href = "<?php echo base_url('restaurant/update/'.$data->id_food);?>" role = "button">UPDATE</a>
+                        <a class = "btn btn-danger" href = "<?php echo base_url('restaurant/delete/'.$data->id_food);?>" role = "button">DELETE</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

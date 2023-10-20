@@ -12,7 +12,7 @@
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color:#DCEDC2;">
     <div class="w-25 p-3" style="background-color:#A8E6CE;"> 
         <h3><?php echo $title; ?></h3>
-        <form method="post" action="<?php echo base_url('index.php/restaurant/update') ?>">
+        <form method="post" action="<?php echo base_url('restaurant/update') ?>">
             <?php foreach ($f_menu as $data) : ?>
                 <label for="id_food" class="form-label">Food ID : </label>
                 <input type="number" class="form-control" id="exampleFormControlInput1" value="<?php echo $data->id_food; ?>" readonly name="id_food">
