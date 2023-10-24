@@ -18,7 +18,7 @@
             <label for="name_food" class="form-label">Food Name : </label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="write food name here" name="name_food">
 
-            <label for="name_food" class="form-label">Food Category : </label><br>
+            <label for="category_food" class="form-label">Food Category : </label><br>
                 <input type="radio" name="category_food" value="Appetizer">
                 <label for="Appetizer">Appetizer</label><br>
         
