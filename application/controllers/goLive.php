@@ -83,7 +83,7 @@ class goLive extends CI_Controller
         if ($this->input->post()) {
             $data_input_pembelian = $this->input->post();
 
-            $domainExists = $this->goLiveModel->isDomainExists($data_input_pembelian['domain']);
+            $domainExists = $this->goLiveModel->cekDomain($data_input_pembelian['domain']);
 
             if (count($domainExists) > 0) {
                 $this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">

@@ -65,7 +65,7 @@
         {
             return $this->db->get('hosting')->result();
         }
-        function isDomainExists($domain) {
+        function cekDomain($domain) {
             $this->db->where('domain', $domain);
             $query = $this->db->get('pembelian'); 
             return $query->result();
